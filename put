@@ -1,0 +1,14 @@
+# default: on
+# description: put file from client to server
+service put
+{
+   port            = 4446
+   socket_type     = stream
+   wait            = no
+   user            = root
+   server          = /home/aysenazezgi/server_put.py
+   log_on_success  += USERID
+   log_on_failure  += USERID
+   disable         = no
+}
+

@@ -1,0 +1,15 @@
+# default: on
+# description: put file from client to server
+service delete
+{
+   port            = 4447
+   socket_type     = stream
+   wait            = no
+   user            = root
+   server          = /home/aysenazezgi/server_delete.py
+   log_on_success  += USERID
+   log_on_failure  += USERID
+   disable         = no
+}
+
+

@@ -1,0 +1,13 @@
+# default: on
+# description: get file in server
+service get
+{
+   port            = 4445
+   socket_type     = stream
+   wait            = no
+   user            = root
+   server          = /home/aysenazezgi/server_get.py
+   log_on_success  += USERID
+   log_on_failure  += USERID
+   disable         = no
+}

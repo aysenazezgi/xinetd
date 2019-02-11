@@ -1,0 +1,13 @@
+# default: on
+# description: List server or create directory
+service list
+{
+   port            = 4444
+   socket_type     = stream
+   wait            = no
+   user            = root
+   server          = /home/aysenazezgi/server_list.py
+   log_on_success  = DURATION EXIT HOST PID USERID
+   log_on_failure  = ATTEMPT HOST USERID
+   disable         = no
+}
